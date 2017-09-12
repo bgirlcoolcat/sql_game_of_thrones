@@ -34,6 +34,10 @@ All your routes should be fully tested.
 
 ### Templating
 
-Once you have made these routes available, you should work with EJS to provide attractive templates to display all of this information. Characters and houses should have their images displayed in a standard size. The list of all houses/people should display their images as thumbnails. 
+We are going to build views to display our wiki data using EJS (Embedded JavaScript) There is more EJS reading and a great tutorial on [scotch.io](https://scotch.io/tutorials/use-ejs-to-template-your-node-application).
+
+EJS has been around for a long time. Its first commit on GitHub was over six years ago. It has almost 1.5 million downloads per month from npm and is widely used to create MVC (Model-View-Controller) application with JavaScript and express.
+
+You should work with EJS to provide attractive templates to display all of this information. Characters and houses should have their images displayed in a standard size. The list of all houses/people should display their images as thumbnails. 
 
 
