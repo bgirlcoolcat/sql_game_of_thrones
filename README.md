@@ -40,4 +40,10 @@ EJS has been around for a long time. Its first commit on GitHub was over six yea
 
 You should work with EJS to provide attractive templates to display all of this information. Characters and houses should have their images displayed in a standard size. The list of all houses/people should display their images as thumbnails. 
 
+NOTE: Some of the images are deliberately missing. When there is no image available, you should use this [placeholder for people](http://vignette4.wikia.nocookie.net/gameofthrones/images/9/92/Faceless_Men_Histories_%26_Lore.png/revision/latest?cb=20160313030358) and [this placeholder for sigils](http://2.media.collegehumor.cvcdn.com/51/64/7692441a5ecc5bfc1b3925fd1cb2a98b-game-of-thrones-sigil-for-house-bluth.jpg). 
+
+
+### Advanced
+
+If you have yet to use joins, try to refactor your SQL queries to use them instead of using PGP.
 
