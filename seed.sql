@@ -3,10 +3,6 @@ CREATE DATABASE game_of_sql;
 
 \c game_of_sql;
 
-  -- FOREIGN KEY (father_id) REFERENCES people(id),`
-  -- FOREIGN KEY (mother_id) REFERENCES people(id),
-
-
 CREATE TABLE houses (
   id SERIAL PRIMARY KEY, 
   house_name VARCHAR (30) NOT NULL, 
