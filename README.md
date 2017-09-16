@@ -6,10 +6,10 @@ Please listen to the Game of Thrones title music whilst reading this readme. For
 ### Goals
 
 1. Build an end to end application using real data
-2. Use SQL joins
-3. Use complex SQL Queries
-4. Improve understanding of Express / PGP / Testing in backend
-5. Learn how to use EJS  
+2. Improve understanding of Express / PGP / 
+3. Improve understanding of configs
+4. Continue testing in backend
+5. DAY 2 - Learn how to use EJS  
 
 
 ### Instructions
@@ -19,8 +19,10 @@ You have been tasked with creating a wiki for Game of Thrones. The seed file has
 Your server should have the following available: 
 
 - The ability to get all houses
+- The ability to get a house by id
 - The ability to add a house
 - The ability to get all people
+- The ability to get a person by id
 - The ability to add a person
 - The ability to get all people who pass a certain criteria (using queries). The queries should be available for 'dead' and 'religion' 
 - The ability to change a character's record to mark them as dead/alive (it happens a lot in Game of Thrones so we should make it easy on our wiki!)
@@ -32,7 +34,7 @@ Your server should have the following available:
 All your routes should be fully tested.
 
 
-### Templating
+### Day 2 - Templating
 
 We are going to build views to display our wiki data using EJS (Embedded JavaScript) There is more EJS reading and a great tutorial on [scotch.io](https://scotch.io/tutorials/use-ejs-to-template-your-node-application).
 
