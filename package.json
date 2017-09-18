@@ -1,0 +1,29 @@
+{
+  "name": "be-game-of-sql",
+  "version": "1.0.0",
+  "description": "A Game of PostGresSQL - a Game of Thrones wiki",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run seed:test && NODE_ENV=test mocha ./spec/*",
+    "start": "NODE_ENV=development nodemon index.js",
+    "seed:test": "psql -f ./db/setup.test.sql && psql -f ./db/seed.test.sql"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Haribo7891/BE-game-of-sql.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Haribo7891/BE-game-of-sql/issues"
+  },
+  "homepage": "https://github.com/Haribo7891/BE-game-of-sql#readme",
+  "dependencies": {
+    "body-parser": "^1.18.1",
+    "chai": "^4.1.2",
+    "express": "^4.15.4",
+    "mocha": "^3.5.3",
+    "pg-promise": "^6.7.1",
+    "supertest": "^3.0.0"
+  }
+}
