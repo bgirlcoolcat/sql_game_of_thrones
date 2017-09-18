@@ -31,7 +31,7 @@ describe('GET /api/houses', () => {
 });
 
 // GET api/house/:id
-describe.only('GET /api/houses/:id', () => {
+describe('GET /api/houses/:id', () => {
   let response;
   // let houseId = req.params.id; 
     before(() => {
@@ -51,7 +51,38 @@ describe.only('GET /api/houses/:id', () => {
       expect(houses.house_name).to.equal('Tarly');
       expect(houses.id).to.equal(8);
     });
-})
-
+});
 
 // test POST api/house
+describe('POST /api/houses', () => {
+  let response;
+  let houseName = 'Night\'s Watch';
+  let houseSigilImg = 'https://vignette4.wikia.nocookie.net/gameofthrones/images/e/ed/Night%27s-Watch-Main-Shield.PNG/revision/latest?cb=20161231113156';
+  let houseWords = 'Sword in the Darkness';
+  let houseSeat = null;
+  let houseRegion =  'The Wall';
+  before(() => {
+    return request
+    .post('/api/houses')
+    .send({
+      house_name: houseName,
+      sigil_img: houseSigilImg,
+      words: houseWords,
+      seat: houseSeat,
+      region: houseRegion
+    }).then((res) => {
+        response = res;
+    })
+  })
+  it('has a statusCode of 201', () => {
+    expect(response.statusCode).to.equal(201);
+  });
+  it('returns the added house with house_name, sigil_img, words, seat, region values', () => {
+    const {house} = response.body;
+    expect(house.house_name).to.equal(houseName);
+    expect(house.sigil_img).to.equal(houseSigilImg);
+    expect(house.words).to.equal(houseWords);
+    expect(house.seat).to.equal(houseSeat);
+    expect(house.region).to.equal(houseRegion);
+  });
+});
