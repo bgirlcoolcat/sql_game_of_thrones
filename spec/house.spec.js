@@ -29,4 +29,29 @@ describe('GET /api/houses', () => {
       expect(response.body.houses.length).to.equal(8);
     });
 });
+
+// GET api/house/:id
+describe.only('GET /api/houses/:id', () => {
+  let response;
+  // let houseId = req.params.id; 
+    before(() => {
+    return request
+      .get('/api/houses/8')
+      .then(res => {
+        response = res;
+      });
+    });
+    // the statusCode
+    it('responds with 200 statusCode', () => {
+      expect(response.statusCode).to.equal(200);
+    });
+    // the response
+    it('responds with the house data on /houses/:id', () => {
+      const {houses} = response.body;
+      expect(houses.house_name).to.equal('Tarly');
+      expect(houses.id).to.equal(8);
+    });
+})
+
+
 // test POST api/house

@@ -3,8 +3,8 @@ module.exports = {
     host: 'localhost',
     port: 5432,
     database: 'game_of_sql_test',
-    // user: 'user-name',
-    // password: 'user-password'
+    user: 'nc',
+    password:'password'
   },
   PORT: process.env.PORT || 3000
 };
