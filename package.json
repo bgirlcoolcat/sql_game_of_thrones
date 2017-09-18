@@ -6,7 +6,7 @@
   "scripts": {
     "test": "npm run seed:test && NODE_ENV=test mocha ./spec/*",
     "start": "NODE_ENV=development nodemon index.js",
-    "seed:test": "psql -f ./db/setup.test.sql && psql -f ./db/seed.test.sql"
+    "seed:test": "psql -f ./db/seed.test.sql"
   },
   "repository": {
     "type": "git",

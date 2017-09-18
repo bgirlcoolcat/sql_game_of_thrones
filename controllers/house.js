@@ -2,13 +2,18 @@
 const db = require('../db/index');
 
 module.exports = {
-  getAllHouses (request, response) {
-
+  getAllHouses (req, res) {
+    db.many('SELECT * FROM HOUSES')
+    .then(function (houses) {
+      res.send({
+        houses: houses
+      });
+    }).catch(console.log);
   },
-  getHousesById (request, response) {
+  getHousesById (req, res) {
     
   },
-  createHouse (request, response){
+  createHouse (req, res){
 
   }
 };
