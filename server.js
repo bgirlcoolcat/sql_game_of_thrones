@@ -6,6 +6,8 @@ const houseRouter = require('./routes/house');
 const personRouter = require('./routes/person');
 const religionRouter = require('./routes/religion');
 
+app.use(json());
+
 app.use('/api/houses', houseRouter);
 app.use('/api/person', personRouter);
 app.use('/api/religion', religionRouter);

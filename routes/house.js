@@ -5,6 +5,6 @@ const houses = require('../controllers/house');
 // Add specific routes to router
 router.get('/', houses.getAllHouses);
 router.get('/:house_id', houses.getHousesById);
-router.post('/:house_id', houses.createHouse);
+router.post('/', houses.createHouse);
 // Export subrouter
 module.exports = router;
