@@ -2,10 +2,15 @@
 const db = require('../db/index');
 
 module.exports = {
-  getAllReligions (request, response) {
-
+  getAllReligions (req, res) {
+    db.many('SELECT * FROM religions')
+    .then(function (religions) {
+      res.send({
+        religions: religions
+      });
+    }).catch(console.log);
   },
-  createReligion (request, response){
-
+  
+  createReligion (req, res){
   }
 };
