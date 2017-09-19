@@ -19,9 +19,14 @@ module.exports = {
         persons: persons
       });
     }).catch(console.log);
-    
   },
-  createPerson (req, res){
 
+  createPerson (req, res){
+    db.one('INSERT INTO people (name, picture_url, dead, house_id, religion_id) VALUES ($1, $2, $3, $4, $5) returning *', [req.body.name, req.body.picture_url, req.body.dead, req.body.house_id, req.body.religion_id])
+    .then((person) => {
+      res.status(201).send({
+        person: person
+      });
+    }).catch(console.log);
   }
 };
