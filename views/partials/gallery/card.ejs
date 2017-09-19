@@ -1,9 +1,13 @@
 <div class="col">
   <div class="card">
+      <% if(house.sigil_img !== null) { %>
       <img class="card-img-top" src="<%= house.sigil_img %>" alt="Card image cap">
-      <div class="card-body">
+      <% } else { %>
+        <img class="card-img-top" src="http://2.media.collegehumor.cvcdn.com/51/64/7692441a5ecc5bfc1b3925fd1cb2a98b-game-of-thrones-sigil-for-house-bluth.jpg" alt="Card image cap">
+        <% } %>
+        <div class="card-body">
           <h4 class="card-title"><%= house.house_name %></h4>
-          <p class="card-text">Favourite words: <%= house.words %></p>
+          <p class="card-text">'<%= house.words %>'</p>
       </div>
   </div>
 </div>
