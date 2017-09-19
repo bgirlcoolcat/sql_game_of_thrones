@@ -1,6 +1,7 @@
 const app = require('./server');
 const {PORT} = require('./config');
 const chunk = require('lodash/chunk');
+const db = require('./db');
 
 app.set('view engine', 'ejs');
 
@@ -16,14 +17,17 @@ app.get('/', (req, res) => {
 });
 
 app.get('/houses', (req, res) => {
+  db.many('SELECT * FROM HOUSES')
+  .then((houses) => {
   res.render('pages/houses', {
       header: {
           title: 'Houses',
           tagLine: 'Behold the many houses of Westeros... and further afield',
           showButton: false
-      }
-      // pets: chunk(pets, 3)
+      },
+      houses: chunk(houses, 3)
       });
+    });
 });
 
 // It lets us know that the Server is up and running...

@@ -1,6 +1,12 @@
     <% include ../partials/head %>
     <% include ../partials/header %>
-        <section class="container">
-            <!-- <p>Welcome to the wonderful world of nothing</p> -->
-        </section>
+    <section class="container">
+        <% houses.forEach(function (houseRow) { %>
+          <div class="row">
+            <% houseRow.forEach(function (house) { %>
+              <% include ../partials/gallery/card %>
+                <% }) %>
+          </div>
+          <% }) %>
+      </section>
     <% include ../partials/footer %>

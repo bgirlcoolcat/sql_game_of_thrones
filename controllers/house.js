@@ -4,7 +4,7 @@ const db = require('../db/index');
 module.exports = {
   getAllHouses (req, res) {
     db.many('SELECT * FROM HOUSES')
-    .then(function (houses) {
+    .then((houses) => {
       res.send({
         houses: houses
       });
