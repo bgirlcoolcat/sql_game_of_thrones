@@ -31,7 +31,7 @@ describe('GET /api/religion', () => {
   });
 
   // test POST api/religion
-describe.only('POST /api/religion', () => {
+describe('POST /api/religion', () => {
     let response;
     let religionName = 'Great Stallion';
     let religionType = 'henotheistic';
