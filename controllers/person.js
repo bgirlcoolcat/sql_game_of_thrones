@@ -11,10 +11,17 @@ module.exports = {
     }).catch(console.log);
   },
 
-  getPersonById (request, response) {
+  getPersonById (req, res) {
+    const {person_id} = req.params;
+    db.one('SELECT * FROM PEOPLE WHERE id = $1', person_id)
+    .then((persons) => {
+      res.send({
+        persons: persons
+      });
+    }).catch(console.log);
     
   },
-  createPerson (request, response){
+  createPerson (req, res){
 
   }
 };
