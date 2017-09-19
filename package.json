@@ -21,7 +21,9 @@
   "dependencies": {
     "body-parser": "^1.18.1",
     "chai": "^4.1.2",
+    "ejs": "^2.5.7",
     "express": "^4.15.4",
+    "lodash": "^4.17.4",
     "mocha": "^3.5.3",
     "pg-promise": "^6.7.1",
     "supertest": "^3.0.0"
