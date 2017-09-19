@@ -1,0 +1,12 @@
+<% include ../partials/head %>
+<% include ../partials/header %>
+    <section class="container">
+        <% persons.forEach(function (personRow) { %>
+            <div class="row">
+              <% personRow.forEach(function (person) { %>
+                <% include ../partials/gallery/personCard %>
+                  <% }) %>
+            </div>
+            <% }) %>
+    </section>
+<% include ../partials/footer %>

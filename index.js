@@ -30,6 +30,20 @@ app.get('/houses', (req, res) => {
     });
 });
 
+app.get('/person', (req, res) => {
+  db.many('SELECT * FROM PEOPLE')
+  .then(function (persons) {
+  res.render('pages/person', {
+      header: {
+          title: 'People',
+          tagLine: 'Characters from near and far',
+          showButton: false
+      },
+      persons: chunk(persons, 3)
+      });
+    });
+});
+
 // It lets us know that the Server is up and running...
 app.listen(PORT, (err) => {
   if (err) console.log(err);

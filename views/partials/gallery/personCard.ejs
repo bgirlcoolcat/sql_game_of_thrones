@@ -1,0 +1,17 @@
+<div class="col">
+  <div class="card">
+      <% if(person.picture_url !== null) { %>
+      <img class="card-img-top" src="<%= person.picture_url %>" alt="Card image cap">
+      <% } else { %>
+        <img class="card-img-top" src="http://vignette4.wikia.nocookie.net/gameofthrones/images/9/92/Faceless_Men_Histories_%26_Lore.png/revision/latest?cb=20160313030358" alt="Card image cap">
+        <% } %>
+        <div class="card-body">
+          <h4 class="card-title"><%= person.name %></h4>
+          <% if(!person.dead) { %>
+            <p class="card-text">'<%= 'I\'m alive!' %>'</p>
+            <% } else { %>
+          <p class="card-text">'<%= 'No more games for me. RIP' %>'</p>
+          <% } %>
+      </div>
+  </div>
+</div>
