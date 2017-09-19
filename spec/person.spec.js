@@ -52,3 +52,37 @@ describe('GET /api/person/:id', () => {
         expect(persons.id).to.equal(6);
       });
   });
+
+  // test POST api/person
+describe('POST /api/person', () => {
+    let response;
+    let personName = 'Renly Baratheon';
+    let personUrl = 'https://www.google.co.uk/url?sa=i&rct=j&q=&esrc=s&source=imgres&cd=&cad=rja&uact=8&ved=0ahUKEwjPgeKShrHWAhXDVRQKHUbHCaQQjRwIBw&url=http%3A%2F%2Fgameofthrones.wikia.com%2Fwiki%2FRenly_Baratheon&psig=AFQjCNGfjSYkxDcqJtkoNyUM5s1qzJcvsA&ust=1505903583556792';
+    let personDead = true;
+    let personHouseId = 3;
+    let personReligionId =  4;
+    before(() => {
+      return request
+      .post('/api/person')
+      .send({
+        name: personName,
+        picture_url: personUrl,
+        dead: personDead,
+        house_id: personHouseId,
+        religion_id: personReligionId
+      }).then((res) => {
+          response = res;
+      })
+    })
+    it('has a statusCode of 201', () => {
+      expect(response.statusCode).to.equal(201);
+    });
+    it('returns the added person with name, picture_url, dead, house_id, religion_id values', () => {
+      const {person} = response.body;
+      expect(person.name).to.equal(personName);
+      expect(person.picture_url).to.equal(personUrl);
+      expect(person.dead).to.equal(personDead);
+      expect(person.house_id).to.equal(personHouseId);
+      expect(person.religion_id).to.equal(personReligionId);
+    });
+  });
