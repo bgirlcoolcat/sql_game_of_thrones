@@ -29,3 +29,26 @@ describe('GET /api/person', () => {
         expect(response.body.persons.length).to.equal(21);
       });
   });
+
+  // GET api/person/:id
+describe('GET /api/person/:id', () => {
+    let response;
+    // let personId = req.params.id; 
+      before(() => {
+      return request
+        .get('/api/person/6')
+        .then(res => {
+          response = res;
+        });
+      });
+      // the statusCode
+      it('responds with 200 statusCode', () => {
+        expect(response.statusCode).to.equal(200);
+      });
+      // the response
+      it('responds with the person data on /person/:id', () => {
+        const {persons} = response.body;
+        expect(persons.name).to.equal('Tyrion Lannister');
+        expect(persons.id).to.equal(6);
+      });
+  });
