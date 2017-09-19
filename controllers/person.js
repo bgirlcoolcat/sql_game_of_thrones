@@ -2,9 +2,15 @@
 const db = require('../db/index');
 
 module.exports = {
-  getAllPeople (request, response) {
-
+  getAllPeople (req, res) {
+    db.many('SELECT * FROM PEOPLE')
+    .then(function (persons) {
+      res.send({
+        persons: persons
+      });
+    }).catch(console.log);
   },
+
   getPersonById (request, response) {
     
   },
