@@ -4,6 +4,6 @@ const router = require('express').Router();
 const religions = require('../controllers/religion');
 // Add specific routes to router
 router.get('/', religions.getAllReligions);
-router.post('/:religion_id', religions.createReligion);
+router.post('/', religions.createReligion);
 // Export subrouter
 module.exports = router;
