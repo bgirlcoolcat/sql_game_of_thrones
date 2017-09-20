@@ -28,5 +28,17 @@ module.exports = {
         person: person
       });
     }).catch(console.log);
-  }
+  },
+
+deletePerson (req, res){
+  const {person_id} = req.params;
+  db.one('DELETE FROM people WHERE id = $1', person_id)
+  .then((person) => {
+    res.status(204).send({
+      person: person
+    });
+  }).catch(console.log);
+}
+
 };
+

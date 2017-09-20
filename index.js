@@ -17,13 +17,13 @@ app.get('/', (req, res) => {
 });
 
 app.get('/houses', (req, res) => {
-  db.many('SELECT * FROM HOUSES')
+  db.many('SELECT * FROM houses')
   .then((houses) => {
   res.render('pages/houses', {
       header: {
           title: 'Houses',
           tagLine: 'Behold the many houses of Westeros... and further afield',
-          showButton: false
+          showButton: true
       },
       houses: chunk(houses, 3)
       });
@@ -31,18 +31,32 @@ app.get('/houses', (req, res) => {
 });
 
 app.get('/person', (req, res) => {
-  db.many('SELECT * FROM PEOPLE')
+  db.many('SELECT * FROM people')
   .then(function (persons) {
   res.render('pages/person', {
       header: {
           title: 'People',
           tagLine: 'Characters from near and far',
-          showButton: false
+          showButton: true
       },
       persons: chunk(persons, 3)
       });
     });
 });
+
+app.get('/religion', (req, res) => {
+    db.many('SELECT * FROM religions')
+    .then((religions) => {
+    res.render('pages/religion', {
+        header: {
+            title: 'Religions',
+            tagLine: 'A multitude of different religions are worshiped by different cultures and peoples in the Known World...',
+            showButton: true
+        },
+        religions: chunk(religions, 3)
+        });
+      });
+  });
 
 // It lets us know that the Server is up and running...
 app.listen(PORT, (err) => {

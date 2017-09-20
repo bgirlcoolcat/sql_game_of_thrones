@@ -6,5 +6,6 @@ const person = require('../controllers/person');
 router.get('/', person.getAllPeople);
 router.get('/:person_id', person.getPersonById);
 router.post('/', person.createPerson);
+router.delete('/:person_id', person.deletePerson);
 // Export subrouter
 module.exports = router;

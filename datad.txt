@@ -1,0 +1,9 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "game_of_sql_dev" as user "nc".
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 8
+INSERT 0 5
+INSERT 0 21

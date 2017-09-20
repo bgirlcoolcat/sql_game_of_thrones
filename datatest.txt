@@ -1,0 +1,55 @@
+DROP DATABASE
+CREATE DATABASE
+You are now connected to database "game_of_sql" as user "nc".
+CREATE TABLE
+CREATE TABLE
+CREATE TABLE
+INSERT 0 8
+INSERT 0 5
+INSERT 0 21
+ id | house_name |                                                                                                                                                                            sigil_img                                                                                                                                                                             |           words           |     seat      |     region      
+----+------------+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+---------------------------+---------------+-----------------
+  1 | Stark      | https://vignette.wikia.nocookie.net/gameofthrones/images/8/8a/House-Stark-Main-Shield.PNG/revision/latest?cb=20170101103142                                                                                                                                                                                                                                      | Winter is Coming          | Winterfell    | The North
+  2 | Lannister  | http://tu9srvbirvvtmjikdmlnbmv0dguud2lraweubm9jb29rawuubmv0.g00.wikia.com/g00/2_Z2FtZW9mdGhyb25lcy53aWtpYS5jb20%3D_/TU9SRVBIRVVTMjIkaHR0cHM6Ly92aWduZXR0ZS53aWtpYS5ub2Nvb2tpZS5uZXQvZ2FtZW9mdGhyb25lcy9pbWFnZXMvOC84YS9Ib3VzZS1MYW5uaXN0ZXItTWFpbi1TaGllbGQuUE5HL3JldmlzaW9uL2xhdGVzdD9jYj0yMDE3MDEwMTA5NTM1NyZpMTBjLm1hcmsuaW1hZ2UudHlwZQ%3D%3D_$/$/$/$/$/$/$/$ | Hear me roar              | Casterly Rock | The Westerlands
+  3 | Baratheon  | http://tu9srvbirvvtmjikdmlnbmv0dguud2lraweubm9jb29rawuubmv0.g00.wikia.com/g00/2_Z2FtZW9mdGhyb25lcy53aWtpYS5jb20%3D_/TU9SRVBIRVVTMjIkaHR0cHM6Ly92aWduZXR0ZS53aWtpYS5ub2Nvb2tpZS5uZXQvZ2FtZW9mdGhyb25lcy9pbWFnZXMvNC80YS9Ib3VzZS1CYXJhdGhlb24tb2YtRHJhZ29uc3RvbmUtTWFpbi1TaGllbGQuUE5HL3JldmlzaW9uL2xhdGVzdD9jYj0yMDE3MDUxOTAwMzQxNw%3D%3D_$/$/$/$/$/$/$/$         | Ours is the fury          | Dragonstone   | Blackwater Bay
+  4 | Targaryen  | http://tu9srvbirvvtmjikdmlnbmv0dguud2lraweubm9jb29rawuubmv0.g00.wikia.com/g00/2_Z2FtZW9mdGhyb25lcy53aWtpYS5jb20%3D_/TU9SRVBIRVVTMjIkaHR0cHM6Ly92aWduZXR0ZS53aWtpYS5ub2Nvb2tpZS5uZXQvZ2FtZW9mdGhyb25lcy9pbWFnZXMvNC80My9Ib3VzZS1UYXJnYXJ5ZW4tTWFpbi1TaGllbGQuUE5HL3JldmlzaW9uL2xhdGVzdD9jYj0yMDE3MDUxMDIzNTMyMCZpMTBjLm1hcmsuaW1hZ2UudHlwZQ%3D%3D_$/$/$/$/$/$/$/$ | Fire and blood            |               | Essos
+  5 | Greyjoy    | http://tu9srvbirvvtmjikdmlnbmv0dguud2lraweubm9jb29rawuubmv0.g00.wikia.com/g00/2_Z2FtZW9mdGhyb25lcy53aWtpYS5jb20%3D_/TU9SRVBIRVVTMjIkaHR0cHM6Ly92aWduZXR0ZS53aWtpYS5ub2Nvb2tpZS5uZXQvZ2FtZW9mdGhyb25lcy9pbWFnZXMvOC84Ni9Ib3VzZS1HcmV5am95LU1haW4tU2hpZWxkLlBORy9yZXZpc2lvbi9sYXRlc3Q%2FY2I9MjAxNzA1MjMwMTU4MzYmaTEwYy5tYXJrLmltYWdlLnR5cGU%3D_$/$/$/$/$/$/$/$     | We do not sow             | Pyke          | Iron Islands
+  6 | Tyrell     |                                                                                                                                                                                                                                                                                                                                                                  | Growing strong            | Highgarden    | The Reach
+  7 | Martell    | http://tu9srvbirvvtmjikdmlnbmv0dguud2lraweubm9jb29rawuubmv0.g00.wikia.com/g00/2_Z2FtZW9mdGhyb25lcy53aWtpYS5jb20%3D_/TU9SRVBIRVVTMjIkaHR0cHM6Ly92aWduZXR0ZS53aWtpYS5ub2Nvb2tpZS5uZXQvZ2FtZW9mdGhyb25lcy9pbWFnZXMvYy9jZi9Ib3VzZS1UeXJlbGwtTWFpbi1TaGllbGQuUE5HL3JldmlzaW9uL2xhdGVzdD9jYj0yMDE3MDEwODE2MzAzNSZpMTBjLm1hcmsuaW1hZ2UudHlwZQ%3D%3D_$/$/$/$/$/$/$/$     | Unbowed, unbent, unbroken | Sunspear      | Dorne
+  8 | Tarly      |                                                                                                                                                                                                                                                                                                                                                                  | First in battle           | Horn Hill     | The Reach
+(8 rows)
+
+ id |        name        |                                           picture_url                                           | dead | house_id | religion_id 
+----+--------------------+-------------------------------------------------------------------------------------------------+------+----------+-------------
+  1 | Ned Stark          | https://upload.wikimedia.org/wikipedia/en/5/52/Ned_Stark-Sean_Bean.jpg                          | t    |        1 |           1
+  2 | Catelyn Stark      | https://upload.wikimedia.org/wikipedia/en/2/25/Catelyn_Stark-Michelle_Fairley_S3.jpg            | t    |        1 |           2
+  3 | Arya Stark         | https://upload.wikimedia.org/wikipedia/en/3/39/Arya_Stark-Maisie_Williams.jpg                   | f    |        1 |           5
+  4 | Sansa Stark        | https://upload.wikimedia.org/wikipedia/en/7/74/SophieTurnerasSansaStark.jpg                     | f    |        1 |           2
+  5 | Jon Snow           | https://upload.wikimedia.org/wikipedia/en/f/f0/Jon_Snow-Kit_Harington.jpg                       | t    |        1 |           1
+  6 | Tyrion Lannister   | https://upload.wikimedia.org/wikipedia/en/5/50/Tyrion_Lannister-Peter_Dinklage.jpg              | f    |        2 |            
+  7 | Jaime Lannister    | https://upload.wikimedia.org/wikipedia/en/b/b4/Jaime_Lannister-Nikolaj_Coster-Waldau.jpg        | f    |        2 |           2
+  8 | Cersei Lannister   | https://upload.wikimedia.org/wikipedia/en/9/94/Cersei_Lannister-Lena_Headey.jpg                 | f    |        2 |           2
+  9 | Tywin Lannister    | https://upload.wikimedia.org/wikipedia/en/c/c6/Tywin_Lannister-Charles_Dance.jpg                | t    |        2 |            
+ 10 | Daenerys Targaryen | https://upload.wikimedia.org/wikipedia/en/0/0d/Daenerys_Targaryen_with_Dragon-Emilia_Clarke.jpg | f    |        3 |            
+ 11 | Viserys Targaryen  |                                                                                                 | t    |        3 |            
+ 12 | Stannis Baratheon  | https://upload.wikimedia.org/wikipedia/en/0/05/Stannis_Baratheon-Stephen_Dillane.jpg            | t    |        4 |           4
+ 13 | Theon Greyjoy      | https://upload.wikimedia.org/wikipedia/en/5/51/Theon_Greyjoy-Alfie_Allen.jpg                    | f    |        5 |           3
+ 14 | Yara Greyjoy       | https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/yara-ellaria-kiss-1500993584.jpg   | f    |        5 |           3
+ 15 | Balon Greyjoy      | http://assets2.ignimgs.com/2016/05/02/balongreyjoyjpg-652c93_1280w.jpg                          | t    |        5 |           3
+ 16 | Olenna Tyrell      | https://upload.wikimedia.org/wikipedia/en/d/da/Olenna_Tyrell-Diana_Rigg.jpg                     | f    |        6 |           2
+ 17 | Margaery Tyrell    | https://upload.wikimedia.org/wikipedia/en/8/84/Margery_Tyrell-Natalie_Dormer.jpg                | f    |        6 |           2
+ 18 | Oberyn Martell     | https://upload.wikimedia.org/wikipedia/en/a/ac/Oberyn_Martell-Pedro_Pascal.jpg                  | t    |        7 |           2
+ 19 | Doran Martell      | https://winteriscoming.net/wp-content/blogs.dir/385/files/2015/03/1Doran.jpg                    | f    |        7 |           2
+ 20 | Samwell Tarly      | https://upload.wikimedia.org/wikipedia/en/4/4d/Samwell_Tarly-John_Bradley.jpg                   | f    |        7 |           2
+ 21 | Randyll Tarly      |                                                                                                 | f    |        7 |           2
+(21 rows)
+
+ id |          name          |          type          |        god         
+----+------------------------+------------------------+--------------------
+  1 | Old Gods of the Forest | animistic              | 
+  2 | Faith of the Seven     | monotheistic           | The Seven
+  3 | The Drowned God        | monolatristic          | The Drowned God
+  4 | The Lord of Light      | monotheistic           | The Red God
+  5 | Faceless Men           | syncretic monotheistic | The Many Faced God
+(5 rows)
+

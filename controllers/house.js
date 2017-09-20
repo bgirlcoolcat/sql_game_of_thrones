@@ -28,5 +28,18 @@ module.exports = {
         house: house
       });
     }).catch(console.log);
+  },
+
+  getAllPeopleByHouse (req, res){
+    const {house_id} = req.params;
+    db.many('SELECT * FROM people WHERE house_id = $1', house_id)
+    .then(function (persons) {
+      res.send({
+        persons: persons
+      });
+    }).catch(console.log);
   }
+
+
+
 };
